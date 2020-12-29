@@ -1,0 +1,8 @@
+Autor zadania: Łukasz Kołodziński.
+Cel zadania: praca ze strukturą danych typu słownik.
+
+Napisz program, który będzie przechowywał dane pracowników przedsiębiorstwa.
+1. Program prosi pracownika o wprowadzenie danych:
+    - nazwiska
+    - miejsca zamieszkania
+    - nr telefonu

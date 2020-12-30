@@ -15,4 +15,3 @@ tj. myślniki oraz spacje.
                 {miejsce_zamieszkania: ___,
                  numer_telefonu: xxx }
     }
- 

@@ -1,5 +1,3 @@
-pracownik = {}
-
 def nr_telefonu() -> int:
     """
     Funkcja przyjmuje input od użytkownika (nr telefonu)
@@ -10,12 +8,13 @@ def nr_telefonu() -> int:
     while True:
         try:
             nr_telefonu = (input("Podaj swój numer telefonu:\n "))
-            nr_telefonu = nr_telefonu.replace('-','')
+            nr_telefonu = nr_telefonu.replace('-', '')
             nr_telefonu = nr_telefonu.replace(' ', '')
             nr_telefonu = nr_telefonu.strip()
             return int(nr_telefonu)
         except ValueError:
             print("Podano błędną wartość. Spróbuj jeszcze raz.")
+
 
 def dane_pracownikow() -> dict:
     """
@@ -31,9 +30,12 @@ def dane_pracownikow() -> dict:
     miejsce_zamieszkania = miejsce_zamieszkania.strip()
     nmr_telefonu = nr_telefonu()
     #print("{}\n{}\n{}".format(nazwisko, miejsce_zamieszkania, nmr_telefonu))
+    pracownik = {}
     pracownik[nazwisko] = {'miejsce_zamieszkania' : miejsce_zamieszkania,
                              'numer_telefonu' : nmr_telefonu}
     #print(pracownik)
     return pracownik
 
-dane_pracownikow()
+
+pracownik = dane_pracownikow()
+print(pracownik)

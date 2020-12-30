@@ -7,9 +7,11 @@ def nr_telefonu() -> int:
     """
     while True:
         try:
-            # TODO: trim, ignorowanie myślnikówm białych znaków
-            nr_telefonu = int(input("Podaj swój numer telefonu:\n "))
-            return nr_telefonu
+            nr_telefonu = (input("Podaj swój numer telefonu:\n "))
+            nr_telefonu = nr_telefonu.replace('-','')
+            nr_telefonu = nr_telefonu.replace(' ', '')
+            nr_telefonu = nr_telefonu.strip()
+            return int(nr_telefonu)
         except ValueError:
             print("Podano błędną wartość. Spróbuj jeszcze raz.")
 
@@ -22,7 +24,10 @@ def dane_pracownikow():
     pracownik = {}
     powitanie = print("Wprowadź kolejno wymienione poniżej dane")
     nazwisko = input("Twoje nazwisko:\n ")
+    nazwisko = nazwisko.strip()
     miejsce_zamieszkania = input("Twoje miejsce zamieszkania:\n ")
-    nr_telefonu()
+    miejsce_zamieszkania = miejsce_zamieszkania.strip()
+    nmr_telefonu = nr_telefonu()
+    #print("{}\n{}\n{}".format(nazwisko, miejsce_zamieszkania, nmr_telefonu))
 
 dane_pracownikow()

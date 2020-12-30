@@ -1,3 +1,5 @@
+pracownik = {}
+
 def nr_telefonu() -> int:
     """
     Funkcja przyjmuje input od użytkownika (nr telefonu)
@@ -15,13 +17,13 @@ def nr_telefonu() -> int:
         except ValueError:
             print("Podano błędną wartość. Spróbuj jeszcze raz.")
 
-def dane_pracownikow():
+def dane_pracownikow() -> dict:
     """
     Funkcja ktora umożliwia przechowywanie i
     zarządzanie danymi pracowników
-    :return: pracownik{}
+    :return: pracownik{nazwisko:{miejsce_zamieszkania: ,numer_telefonu: }}
+    :rtype: dict
     """
-    pracownik = {}
     powitanie = print("Wprowadź kolejno wymienione poniżej dane")
     nazwisko = input("Twoje nazwisko:\n ")
     nazwisko = nazwisko.strip()
@@ -29,5 +31,9 @@ def dane_pracownikow():
     miejsce_zamieszkania = miejsce_zamieszkania.strip()
     nmr_telefonu = nr_telefonu()
     #print("{}\n{}\n{}".format(nazwisko, miejsce_zamieszkania, nmr_telefonu))
+    pracownik[nazwisko] = {'miejsce_zamieszkania' : miejsce_zamieszkania,
+                             'numer_telefonu' : nmr_telefonu}
+    #print(pracownik)
+    return pracownik
 
 dane_pracownikow()

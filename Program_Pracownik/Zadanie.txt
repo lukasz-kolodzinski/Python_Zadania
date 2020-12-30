@@ -6,3 +6,13 @@ Napisz program, który będzie przechowywał dane pracowników przedsiębiorstwa
     - nazwiska
     - miejsca zamieszkania
     - nr telefonu
+Z danych wprowadzonych przez pracownika należy usunąć zbędne znaki,
+tj. myślniki oraz spacje.
+
+2. Otrzymane dane należy zapisać w formie słownika, wg poniższego schematu:
+    pracownik={
+                nazwisko:
+                {miejsce_zamieszkania: ___,
+                 numer_telefonu: xxx }
+    }
+ 
